@@ -19,3 +19,10 @@
     </ul>
   <% end %>
 </div>
+<ul>
+  <% if @friends %>
+    <% @friends.each do |friend| %>
+      <li><%= "#{friend['firstName']} #{friend['lastName']}" %></li>
+    <% end %>
+  <% end %>
+</ul>
