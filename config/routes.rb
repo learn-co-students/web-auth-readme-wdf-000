@@ -3,4 +3,9 @@ Rails.application.routes.draw do
   get '/search', to: 'searches#search'
   post '/search', to: 'searches#foursquare'
 
+  # handle FourSquare's redirect after login process
+  get '/auth', to: 'sessions#create'
+
+  get '/friends', to: 'searches#friends'
+
 end
