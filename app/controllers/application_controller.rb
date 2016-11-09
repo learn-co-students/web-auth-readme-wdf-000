@@ -13,6 +13,10 @@ private
     redirect_to foursquare_url unless logged_in?
   end
 
+  #this private method we have our client id. he have our redirect path a d we have a vr qual to the foursquare website
+  #that take in the client id , and also provides the redirect url. if the user is logged in we do not ask for the code. the token is already saved in the
+  #session controller. if the user is logged in the oauth page redirects to the /auth page because its the default callback url.
+
 
 
 
@@ -28,7 +32,7 @@ private
   private
 
 
-  def logged_in?
+  def logged_in?           #this method checks if the user has a access token stored in their session.
     !!session[:token]
   end
 
